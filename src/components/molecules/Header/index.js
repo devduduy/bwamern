@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "elements/Button";
-import BrandIcon from "parts/IconText";
+import { Button } from "../../atoms";
+import BrandIcon from "../../atoms/Button/IconText";
 
 const Header = (props) => {
   const getNavLinkClass = (path) => {
@@ -10,7 +10,10 @@ const Header = (props) => {
   return (
     <header className="spacing-sm">
       <div className="container">
-        <nav className="navbar navbar-expand-lg navbar-light">
+        <nav
+          className="navbar navbar-expand-lg navbar-light"
+          data-aos="fade-up"
+        >
           <BrandIcon />
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ml-auto">

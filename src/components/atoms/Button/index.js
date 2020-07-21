@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import propTypes from "prop-types";
 
-export default function Button(props) {
+const Button = (props) => {
   const className = [props.className];
   if (props.isPrimary) className.push("btn-primary");
   if (props.isLarge) className.push("btn-lg");
@@ -58,7 +58,7 @@ export default function Button(props) {
   }
 
   return (
-    <div>
+    <div data-aos="zoom-in" data-delay-aos="300">
       <button
         className={className.join(" ")}
         style={props.style}
@@ -68,7 +68,7 @@ export default function Button(props) {
       </button>
     </div>
   );
-}
+};
 
 Button.propTypes = {
   type: propTypes.oneOf(["button", "link"]),
@@ -84,3 +84,5 @@ Button.propTypes = {
   isExternal: propTypes.bool,
   hasShadow: propTypes.bool,
 };
+
+export default Button;

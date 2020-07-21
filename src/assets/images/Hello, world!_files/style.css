@@ -1,0 +1,158 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.nav-item a.nav-link {
+    margin-right: 25px;
+}
+
+.navbar-nav li.nav-item a {
+    color: #464646 !important;
+}
+
+.navbar-nav li.nav-item.active a {
+    color: #D0970B !important;
+}
+
+li.nav-item a.contact-us {
+    padding: 8px 25px !important;
+    color: white !important;
+    background-color: #D0970B;
+    border-radius: 100px;
+}
+
+nav.navbar {
+    padding: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Hero */
+
+.image-hero {
+    width: 100%;
+    height: 579px;
+    background-size: cover;
+    position: relative;
+}
+
+.image-hero img {
+    position: absolute;
+    z-index: 1;
+    top: -120px;
+    left: -50px;
+}
+
+/* canvas */
+canvas#myCanvas1 {
+    position: absolute;
+    z-index: 3;
+
+}
+
+@media screen and (max-width: 400px) {
+    canvas#myCanvas1 {
+        left: -20%;
+        height: 30%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .image-hero {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .image-hero img {
+        margin-top: 30px;
+        top: -13%;
+        width: 600px;
+        left: -30%;
+    }
+}
+
+section {
+    margin-top: 30px;
+}
+
+section#carousel .btn-kategori {
+    padding: 8px 15px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 100px;
+    background-color: #ddd;
+    color: #8A8A8A;
+    font-size: 13px;
+}
+
+section#carousel .btn-kategori.active {
+    background-color: #D0970B;
+    color: white;
+}
+
+section#carousel .btn-kategori:hover {
+    background-color: #D0970B;
+    color: white;
+}
+
+section#carousel .btn-kategori:active,
+.btn-kategori:focus {
+    outline: none;
+    border-radius: 100px;
+}
+
+/* .card {
+    padding: 20px;
+    box-shadow: 0 0 8px 0 #ccc;
+    border-radius: 35px;
+} */
+.img-size {
+    display: flex;
+}
+
+.img-size .item {
+    width: 100px;
+    height: 200px;
+    margin: 20px;
+}
+
+.img-size .item img {
+    width: 100%;
+    height: 100%;
+}
+
+.slick-next:before,
+.slick-prev:before {
+    font-size: 30px !important;
+    color: #8A8A8A;
+}
+
+/* Footer */
+
+section.footer {
+    background-color: #343434;
+    padding: 20px;
+}
+
+.footer h6 {
+    color: #D0970B;
+    font-weight: bold;
+    align-items: center;
+}
+
+.footer p {
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    align-items: center;
+}
+
+.follow {
+    width: 40px;
+}

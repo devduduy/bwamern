@@ -1,12 +1,15 @@
 import React from "react";
 
-import Button from "elements/Button";
+import { Button } from "../../atoms";
 
-export default function Categories({ data }) {
+const Categories = ({ data }) => {
+  let $count = 0;
   return data.map((category, index1) => {
     return (
       <section className="container" key={`category-${index1}`}>
-        <h4 className="mb-3 font-weight-medium">{category.name}</h4>
+        <h4 className="mb-3 font-weight-medium" data-aos="fade-up">
+          {category.name}
+        </h4>
         <div className="container-grid">
           {category.items.length === 0 ? (
             <div className="row">
@@ -21,7 +24,11 @@ export default function Categories({ data }) {
                   className="item column-3 row-1"
                   key={`category-${index1}-item-${index2}`}
                 >
-                  <div className="card">
+                  <div
+                    className="card"
+                    data-aos="fade-left"
+                    data-aos-delay={($count += 100)}
+                  >
                     {item.isPopular && (
                       <div className="tag">
                         Popular{" "}
@@ -39,9 +46,9 @@ export default function Categories({ data }) {
                       <Button
                         type="link"
                         href={`/properties/${item._id}`}
-                        className="stretched-link d-block text-gray-800"
+                        className="stretched-link d-block"
                       >
-                        <h5 className="h4">{item.name}</h5>
+                        <h5 className="h4 text-gray-900">{item.name}</h5>
                       </Button>
                       <span className="text-gray-500">
                         {item.city},{item.country}
@@ -56,4 +63,6 @@ export default function Categories({ data }) {
       </section>
     );
   });
-}
+};
+
+export default Categories;

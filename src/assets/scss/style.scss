@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+@import "colorVariables";
 @import "functions";
 @import "variables";
 @import "mixins";
@@ -146,6 +147,7 @@ section {
             font-size: .875rem;
             font-weight: 200;
         }
+
     }
 
     &.card-featured {
@@ -206,7 +208,56 @@ section {
 
             .img-wrapper {
                 transform: scale(1);
+                opacity: 0.7;
             }
         }
+    }
+}
+
+// testimony component
+
+.testimonial-hero,
+.testimonial-hero img {
+    width: 365px;
+    height: 500px;
+
+    .main-img {
+        border-radius: 15px 15px 100px 15px;
+    }
+}
+
+//Footer
+
+footer {
+    border-top: 1px solid $gray-200;
+    padding-top: 50px;
+
+    .brand-tagline {
+        color: $gray-500;
+        font-weight: 300;
+        margin-top: 8px;
+    }
+
+    .list-group-item {
+        padding: 0.3125rem 0;
+        border: none;
+
+        a,
+        span {
+            color: $gray-500;
+            font-weight: 300;
+        }
+
+        a {
+            @include hover-focus {
+                color: $gray-800;
+            }
+        }
+    }
+
+    .copyrights {
+        padding: 20px 0;
+        font-weight: 300;
+        color: $gray-500;
     }
 }

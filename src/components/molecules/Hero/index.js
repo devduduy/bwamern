@@ -7,7 +7,7 @@ import IconCities from "assets/images/icons/ic_cities.svg";
 import IconTraveler from "assets/images/icons/ic_traveler.svg";
 import IconTreasure from "assets/images/icons/ic_treasure.svg";
 
-import Button from "elements/Button";
+import { Button } from "../../../components";
 
 const Hero = (props) => {
   const showMostPicked = () => {
@@ -21,13 +21,19 @@ const Hero = (props) => {
     <section className="container pt-4">
       <div className="row align-items-center">
         <div className="col-auto pr-5" style={{ width: 500 }}>
-          <h1 className="font-weight-bold line-height-1 mb-3">
+          <h1
+            className="font-weight-bold line-height-1 mb-3"
+            data-aos="fade-up"
+            data-delay-aos="100"
+          >
             Forget Busy Work, <br />
             Start Next Vacation
           </h1>
           <p
             className="mb-4 font-weight-light text-gray-500 w-75"
             style={{ lineHeight: "170%" }}
+            data-aos="fade-up"
+            data-delay-aos="200"
           >
             We provide what you need to enjoy your holiday with family. Time to
             make another memorable moments.
@@ -41,7 +47,11 @@ const Hero = (props) => {
             Show Me Now
           </Button>
           <div className="row" style={{ marginTop: 80 }}>
-            <div className="col-auto" style={{ marginRight: 35 }}>
+            <div
+              className="col-auto"
+              style={{ marginRight: 35 }}
+              data-aos="fade-left"
+            >
               <img
                 width="32"
                 height="32"
@@ -60,7 +70,12 @@ const Hero = (props) => {
                 </span>
               </h6>
             </div>
-            <div className="col-auto" style={{ marginRight: 35 }}>
+            <div
+              className="col-auto"
+              style={{ marginRight: 35 }}
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
               <img
                 width="32"
                 height="32"
@@ -79,7 +94,7 @@ const Hero = (props) => {
                 </span>
               </h6>
             </div>
-            <div className="col-auto">
+            <div className="col-auto" data-aos="fade-left" data-aos-delay="300">
               <img
                 width="32"
                 height="32"
@@ -98,7 +113,7 @@ const Hero = (props) => {
           </div>
         </div>
 
-        <div className="col-6 pl-5">
+        <div className="col-6 pl-5" data-aos="zoom-in">
           <div style={{ width: 520, height: 410 }}>
             <img
               src={ImageHero}
