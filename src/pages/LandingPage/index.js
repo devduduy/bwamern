@@ -19,14 +19,14 @@ class LandingPage extends Component {
   render() {
     return (
       <>
-        <Header {...this.props}></Header>
+        <Header {...this.props} />
         <Hero refMostPicked={this.refMostPicked} data={JsonLandingPage.hero} />
         <MostPicked
           refMostPicked={this.refMostPicked}
           data={JsonLandingPage.mostPicked}
         />
         <Categories data={JsonLandingPage.categories} />
-        <Testimony data={JsonLandingPage.testimonial}></Testimony>
+        <Testimony data={JsonLandingPage.testimonial} />
         <Footer />
       </>
     );

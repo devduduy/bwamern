@@ -58,7 +58,7 @@ const Button = (props) => {
   }
 
   return (
-    <div data-aos="zoom-in" data-delay-aos="300">
+    <div>
       <button
         className={className.join(" ")}
         style={props.style}

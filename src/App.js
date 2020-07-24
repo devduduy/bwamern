@@ -1,19 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import AOS from "aos";
 
 import "assets/scss/style.scss";
-import "aos/dist/aos.css";
 import LandingPage from "./pages/LandingPage";
+import DetailsPage from "./pages/DetailsPage";
 
 function App() {
-  AOS.init({
-    once: true,
-  });
   return (
     <div className="App">
       <Router>
-        <Route path="/" component={LandingPage}></Route>
+        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/properties/:id" component={DetailsPage} />
       </Router>
     </div>
   );

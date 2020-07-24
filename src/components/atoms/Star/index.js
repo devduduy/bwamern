@@ -59,8 +59,6 @@ const Star = ({ className, value, height, width, spacing }) => {
       <div
         className={["stars", className].join(" ")}
         style={{ height: height }}
-        data-aos="fade-up"
-        data-aos-delay="100"
       >
         {starPlaceholder}
         {star}
