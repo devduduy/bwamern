@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import PageDetailTitle from "./PageDetailTitle";
 import FeaturedImage from "./FeaturedImage";
 import PageDetailDescription from "./PageDetailDescription";
+import BookingForm from "./BookingForm";
 
 export {
   Header,
@@ -18,4 +19,5 @@ export {
   PageDetailTitle,
   FeaturedImage,
   PageDetailDescription,
+  BookingForm,
 };

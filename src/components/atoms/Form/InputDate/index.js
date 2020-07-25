@@ -16,8 +16,10 @@ const InputDate = (props) => {
 
   const datePickerChange = (value) => {
     const target = {
-      value: value.selection,
-      name: name,
+      target: {
+        value: value.selection,
+        name: name,
+      },
     };
     props.onChange(target);
   };

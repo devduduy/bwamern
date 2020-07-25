@@ -5,6 +5,10 @@ import {
   Header,
   PageDetailDescription,
   PageDetailTitle,
+  BookingForm,
+  Categories,
+  Testimony,
+  Footer,
 } from "../../components";
 
 class DetailsPage extends Component {
@@ -29,9 +33,15 @@ class DetailsPage extends Component {
             <div className="col-7 pr-5">
               <PageDetailDescription data={JsonItemDetails} />
             </div>
-            <div className="col-5">Booking Form</div>
+            <div className="col-5">
+              <BookingForm itemDetails={JsonItemDetails} />
+            </div>
           </div>
         </section>
+
+        <Categories data={JsonItemDetails.categories} />
+        <Testimony data={JsonItemDetails.testimonial} />
+        <Footer />
       </>
     );
   }
