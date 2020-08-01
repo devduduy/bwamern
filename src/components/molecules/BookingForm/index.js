@@ -5,6 +5,8 @@ import Zoom from "react-reveal/Zoom";
 import { Button } from "../../atoms";
 import { InputNumber, InputDate } from "../../atoms/Form";
 
+import { JsonItemDetails } from "assets/json";
+
 class BookingForm extends Component {
   constructor(props) {
     super(props);
@@ -105,12 +107,21 @@ class BookingForm extends Component {
             </span>
           </h6>
 
-          <Button
+          {/* <Button
             className="btn"
             hasShadow
             isPrimary
             isBlock
-            onClick={startBooking}
+            href={startBooking}
+          >
+            Continue to Book
+          </Button> */}
+          <Button
+            className="btn"
+            type="link"
+            hasShadow
+            isPrimary
+            href={`/checkout/${JsonItemDetails._id}`}
           >
             Continue to Book
           </Button>

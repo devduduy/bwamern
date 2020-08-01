@@ -29,18 +29,18 @@ const InputText = (props) => {
         value: e.target.value,
       },
     };
+
+    if (type === "email") {
+      if (!pattern.test(e.target.value)) setHasError(errorResponse);
+      else setHasError(null);
+    }
+
+    if (type === "tel") {
+      if (e.target.validity.valid) props.onChange(target);
+    } else {
+      props.onChange(target);
+    }
   };
-
-  if (type === "email") {
-    if (!pattern.test(e.target.value)) setHasError(errorResponse);
-    else setHasError(null);
-  }
-
-  if (type === "tel") {
-    if (e.target.value.valid) props.onChange(target);
-  } else {
-    props.onChange(target);
-  }
 
   return (
     <div className={["input-text mb-3", outerClassName].join(" ")}>

@@ -9,6 +9,16 @@ import FeaturedImage from "./FeaturedImage";
 import PageDetailDescription from "./PageDetailDescription";
 import BookingForm from "./BookingForm";
 
+import Stepper from "./Stepper";
+import Controller from "./Stepper/Controller";
+import MainContent from "./Stepper/MainContent";
+import Meta from "./Stepper/Meta";
+import Numbering from "./Stepper/Numbering";
+
+import BookingInformation from "./Checkout/BookingInformation";
+import Payment from "./Checkout/Payment";
+import Completed from "./Checkout/Completed";
+
 export {
   Header,
   Hero,
@@ -20,4 +30,12 @@ export {
   FeaturedImage,
   PageDetailDescription,
   BookingForm,
+  Stepper,
+  Controller,
+  MainContent,
+  Meta,
+  Numbering,
+  BookingInformation,
+  Payment,
+  Completed,
 };

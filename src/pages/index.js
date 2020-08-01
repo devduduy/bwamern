@@ -1,4 +1,5 @@
 import LandingPage from "./LandingPage";
-import Example from "./Example";
+import DetailsPage from "./DetailsPage";
+import Checkout from "./Checkout";
 
-export { LandingPage, Example };
+export { LandingPage, DetailsPage, Checkout };
